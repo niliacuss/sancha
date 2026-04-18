@@ -1,0 +1,1313 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sancha — Hippe &amp; trendy damesmode | Tilburg</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Outfit:wght@300;400;500;600&family=Allura&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #f6f1ea;
+    --cream-deep: #ede4d6;
+    --sand: #e8dcc8;
+    --taupe: #b8a48a;
+    --taupe-dark: #8a7558;
+    --ink: #2a2520;
+    --sage: #a8b19a;
+    --sage-deep: #7d8971;
+    --clay: #c08870;
+    --blush: #e6c9b8;
+    --white: #fefcf8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Outfit', sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.6;
+    font-weight: 300;
+    overflow-x: hidden;
+  }
+
+  .serif { font-family: 'Cormorant Garamond', serif; }
+  .script { font-family: 'Allura', cursive; font-weight: 400; }
+
+  /* ---------- NAV ---------- */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(246, 241, 234, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(184, 164, 138, 0.2);
+  }
+
+  .logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 500;
+    letter-spacing: 6px;
+    color: var(--ink);
+  }
+
+  .logo .amp { font-family: 'Allura', cursive; font-size: 32px; color: var(--clay); letter-spacing: 0; margin: 0 2px; }
+
+  .nav-links {
+    display: flex;
+    gap: 38px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: var(--ink);
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 400;
+    position: relative;
+    padding-bottom: 4px;
+    transition: color .3s;
+  }
+
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 50%;
+    width: 0; height: 1px;
+    background: var(--clay);
+    transition: all .3s;
+  }
+
+  .nav-links a:hover { color: var(--clay); }
+  .nav-links a:hover::after { width: 100%; left: 0; }
+
+  .nav-cta {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+  }
+
+  .icon-btn {
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    border: 1px solid var(--taupe);
+    background: transparent;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    transition: all .3s;
+    color: var(--ink);
+  }
+
+  .icon-btn:hover { background: var(--ink); color: var(--cream); border-color: var(--ink); }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    min-height: 100vh;
+    padding: 140px 60px 80px;
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    position: relative;
+    background:
+      radial-gradient(circle at 20% 30%, rgba(230, 201, 184, 0.25), transparent 50%),
+      radial-gradient(circle at 80% 70%, rgba(168, 177, 154, 0.2), transparent 50%),
+      var(--cream);
+  }
+
+  .hero-text .tag {
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--taupe-dark);
+    margin-bottom: 24px;
+    padding: 8px 18px;
+    border: 1px solid var(--taupe);
+    border-radius: 30px;
+  }
+
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(52px, 7vw, 92px);
+    line-height: 1;
+    font-weight: 400;
+    margin-bottom: 30px;
+    color: var(--ink);
+  }
+
+  .hero h1 .accent {
+    font-family: 'Allura', cursive;
+    font-weight: 400;
+    color: var(--clay);
+    display: block;
+    font-size: 1.1em;
+    margin: 8px 0;
+    transform: translateX(40px);
+  }
+
+  .hero-text p {
+    font-size: 17px;
+    color: var(--taupe-dark);
+    max-width: 460px;
+    margin-bottom: 40px;
+    font-weight: 300;
+  }
+
+  .btn-group { display: flex; gap: 18px; flex-wrap: wrap; }
+
+  .btn {
+    padding: 16px 36px;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 40px;
+    transition: all .35s;
+    cursor: pointer;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
+    border: none;
+  }
+
+  .btn-dark {
+    background: var(--ink);
+    color: var(--cream);
+  }
+
+  .btn-dark:hover {
+    background: var(--clay);
+    transform: translateY(-2px);
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--ink);
+    border: 1px solid var(--ink);
+  }
+
+  .btn-outline:hover { background: var(--ink); color: var(--cream); }
+
+  /* Hero image collage */
+  .hero-visual {
+    position: relative;
+    height: 560px;
+  }
+
+  .hero-img {
+    position: absolute;
+    border-radius: 200px 200px 0 0;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(42, 37, 32, 0.15);
+  }
+
+  .hero-img.main {
+    width: 58%;
+    height: 480px;
+    top: 40px; right: 10%;
+    background: linear-gradient(135deg, #c9a88a, #a88567);
+  }
+
+  .hero-img.accent {
+    width: 42%;
+    height: 340px;
+    bottom: 20px; left: 0;
+    background: linear-gradient(135deg, #d4b8a0, #b8997f);
+    border-radius: 0 0 200px 200px;
+  }
+
+  .hero-img svg { width: 100%; height: 100%; display: block; }
+
+  .deco-badge {
+    position: absolute;
+    top: 20px; right: 0;
+    width: 120px; height: 120px;
+    background: var(--sage);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: var(--white);
+    text-align: center;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    animation: spin 20s linear infinite;
+  }
+
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .deco-badge span { display: block; font-family: 'Allura', cursive; font-size: 28px; text-transform: none; letter-spacing: 0; line-height: 1; }
+
+  /* ---------- QUICK LINKS ---------- */
+  .quick {
+    padding: 100px 60px;
+    background: var(--cream-deep);
+    position: relative;
+  }
+
+  .section-title {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .section-title .pre {
+    display: block;
+    font-size: 12px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--taupe-dark);
+    margin-bottom: 14px;
+  }
+
+  .section-title h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 4.5vw, 54px);
+    font-weight: 400;
+    color: var(--ink);
+    line-height: 1.1;
+  }
+
+  .section-title h2 .script {
+    font-family: 'Allura', cursive;
+    color: var(--clay);
+    font-size: 1.3em;
+  }
+
+  .quick-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .quick-card {
+    display: flex;
+    align-items: center;
+    background: var(--white);
+    border-radius: 60px;
+    padding: 10px 28px 10px 10px;
+    gap: 18px;
+    text-decoration: none;
+    color: var(--ink);
+    transition: all .35s;
+    border: 1px solid transparent;
+  }
+
+  .quick-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--clay);
+    box-shadow: 0 10px 30px rgba(42, 37, 32, 0.08);
+  }
+
+  .quick-card .circle {
+    width: 64px; height: 64px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    overflow: hidden;
+  }
+
+  .quick-card .circle svg { width: 100%; height: 100%; }
+
+  .quick-card .label {
+    font-size: 12px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  /* ---------- BLOG / NIEUW ---------- */
+  .new-arrivals {
+    padding: 120px 60px 80px;
+    background: var(--cream);
+  }
+
+  .new-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .new-header h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 400;
+  }
+
+  .filter-pills {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+    flex-wrap: wrap;
+  }
+
+  .filter-pills li a {
+    font-size: 12px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--taupe-dark);
+    padding: 8px 4px;
+    transition: color .3s;
+    position: relative;
+  }
+
+  .filter-pills li a.active,
+  .filter-pills li a:hover {
+    color: var(--clay);
+  }
+
+  .filter-pills li a.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--clay);
+  }
+
+  .wave-frame {
+    position: relative;
+    padding: 70px 40px;
+    background: var(--blush);
+  }
+
+  .wave-frame::before,
+  .wave-frame::after {
+    content: '';
+    position: absolute;
+    left: 0; right: 0;
+    height: 40px;
+    background-image: radial-gradient(circle at 20px 0, var(--cream) 20px, transparent 21px);
+    background-size: 40px 40px;
+    background-repeat: repeat-x;
+  }
+
+  .wave-frame::before { top: -1px; }
+  .wave-frame::after { bottom: -1px; transform: rotate(180deg); }
+
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .product-card {
+    text-align: center;
+    background: var(--white);
+    padding: 20px;
+    border-radius: 4px;
+    border: 1px solid var(--blush);
+    transition: transform .4s;
+  }
+
+  .product-card:hover { transform: translateY(-8px); }
+
+  .product-img {
+    width: 100%;
+    aspect-ratio: 3/4;
+    margin-bottom: 20px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .product-img svg { width: 100%; height: 100%; display: block; }
+
+  .product-category {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--clay);
+    margin-bottom: 8px;
+  }
+
+  .product-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    margin-bottom: 16px;
+    color: var(--ink);
+    line-height: 1.25;
+  }
+
+  .product-btn {
+    display: inline-block;
+    padding: 10px 28px;
+    background: transparent;
+    color: var(--ink);
+    text-decoration: none;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    border: 1px solid var(--ink);
+    border-radius: 30px;
+    transition: all .3s;
+  }
+
+  .product-btn:hover { background: var(--ink); color: var(--cream); }
+
+  .product-btn em {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    text-transform: lowercase;
+    letter-spacing: 1px;
+  }
+
+  .carousel-nav {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 50px;
+  }
+
+  .carousel-nav button {
+    width: 42px; height: 42px;
+    border-radius: 50%;
+    background: var(--white);
+    border: 1px solid var(--taupe);
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    transition: all .3s;
+    color: var(--ink);
+  }
+
+  .carousel-nav button:hover { background: var(--ink); color: var(--cream); }
+
+  .view-all {
+    text-align: center;
+    padding: 30px;
+    background: var(--blush);
+  }
+
+  .view-all a {
+    color: var(--ink);
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+
+  /* ---------- BEST SELLERS ---------- */
+  .bestsellers {
+    padding: 80px 60px;
+    background: var(--cream);
+  }
+
+  .bs-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto 50px;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .bs-header h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(28px, 3.5vw, 42px);
+    font-weight: 400;
+  }
+
+  .bs-header a {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--ink);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
+  .bs-track-wrap {
+    background: var(--sand);
+    padding: 40px 20px;
+    position: relative;
+  }
+
+  .bs-track {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .bs-item {
+    background: var(--white);
+    padding: 20px;
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    transition: transform .3s;
+  }
+
+  .bs-item:hover { transform: scale(1.03); }
+
+  .bs-item .product-visual {
+    flex: 1;
+    display: grid;
+    place-items: center;
+    padding: 10px;
+  }
+
+  .bs-item .product-visual svg { max-width: 100%; max-height: 100%; }
+
+  .bs-item .shop-now {
+    text-align: center;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--ink);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    padding-top: 8px;
+  }
+
+  .new-tag {
+    position: absolute;
+    top: -10px; left: -10px;
+    width: 48px; height: 48px;
+    background: var(--clay);
+    color: var(--white);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 500;
+    transform: rotate(-12deg);
+  }
+
+  /* ---------- ABOUT ---------- */
+  .about {
+    padding: 120px 60px;
+    background: var(--cream-deep);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .about-img {
+    position: relative;
+    height: 520px;
+  }
+
+  .about-img .main-frame {
+    width: 80%;
+    height: 100%;
+    background: linear-gradient(135deg, #d4c4a8, #b8a48a);
+    border-radius: 300px 300px 40px 40px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .about-img .main-frame svg { width: 100%; height: 100%; }
+
+  .about-img .accent-circle {
+    position: absolute;
+    width: 180px; height: 180px;
+    background: var(--sage);
+    border-radius: 50%;
+    bottom: 40px; right: 0;
+    display: grid;
+    place-items: center;
+    color: var(--white);
+    text-align: center;
+  }
+
+  .accent-circle .script { font-size: 40px; line-height: 1; }
+  .accent-circle .sub { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; margin-top: 6px; }
+
+  .about-text .pre {
+    font-size: 12px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--clay);
+    margin-bottom: 18px;
+    display: block;
+  }
+
+  .about-text h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 4vw, 56px);
+    font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: 30px;
+  }
+
+  .about-text h2 .script {
+    font-family: 'Allura', cursive;
+    color: var(--clay);
+    font-size: 1.2em;
+  }
+
+  .about-text p {
+    font-size: 16px;
+    color: var(--taupe-dark);
+    margin-bottom: 20px;
+    line-height: 1.8;
+  }
+
+  .signature {
+    font-family: 'Allura', cursive;
+    font-size: 38px;
+    color: var(--ink);
+    margin-top: 20px;
+    display: block;
+  }
+
+  /* ---------- NEWSLETTER ---------- */
+  .newsletter {
+    padding: 80px 60px;
+    background: var(--white);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 40px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .newsletter-left h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 6px;
+  }
+
+  .newsletter-left h3 .script {
+    font-family: 'Allura', cursive;
+    color: var(--clay);
+  }
+
+  .newsletter-left p {
+    font-size: 12px;
+    color: var(--taupe-dark);
+    font-style: italic;
+  }
+
+  .newsletter-form {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .newsletter-form input {
+    padding: 16px 24px;
+    background: transparent;
+    border: 1px solid var(--taupe);
+    border-radius: 2px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--ink);
+    min-width: 200px;
+  }
+
+  .newsletter-form input::placeholder { color: var(--taupe); }
+  .newsletter-form input:focus { outline: none; border-color: var(--clay); }
+
+  .newsletter-form button {
+    padding: 16px 32px;
+    background: var(--ink);
+    color: var(--cream);
+    border: none;
+    font-family: 'Outfit', sans-serif;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background .3s;
+  }
+
+  .newsletter-form button:hover { background: var(--clay); }
+
+  /* ---------- FOOTER ---------- */
+  footer {
+    background: var(--cream-deep);
+    padding: 80px 60px 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 50px;
+    align-items: start;
+  }
+
+  .footer-logo {
+    text-align: center;
+  }
+
+  .logo-stamp {
+    width: 160px; height: 160px;
+    border-radius: 50%;
+    border: 1px solid var(--taupe);
+    margin: 0 auto 20px;
+    display: grid;
+    place-items: center;
+    position: relative;
+  }
+
+  .logo-stamp::before {
+    content: '';
+    position: absolute;
+    inset: 8px;
+    border-radius: 50%;
+    border: 1px solid var(--taupe);
+  }
+
+  .stamp-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--ink);
+    text-align: center;
+  }
+
+  .stamp-text .initials {
+    font-family: 'Allura', cursive;
+    font-size: 48px;
+    color: var(--clay);
+    letter-spacing: 0;
+    text-transform: none;
+    display: block;
+    line-height: 1;
+    margin: 6px 0;
+  }
+
+  .socials {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 16px;
+  }
+
+  .socials a {
+    width: 34px; height: 34px;
+    border-radius: 50%;
+    background: var(--ink);
+    color: var(--cream);
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all .3s;
+  }
+
+  .socials a:hover { background: var(--clay); transform: translateY(-2px); }
+
+  .footer-col h4 {
+    font-size: 12px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--ink);
+    margin-bottom: 24px;
+    font-weight: 500;
+  }
+
+  .footer-col ul {
+    list-style: none;
+  }
+
+  .footer-col ul li {
+    margin-bottom: 12px;
+  }
+
+  .footer-col ul a {
+    color: var(--taupe-dark);
+    text-decoration: none;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: color .3s;
+  }
+
+  .footer-col ul a:hover { color: var(--clay); }
+
+  .footer-about {
+    position: relative;
+  }
+
+  .footer-about .about-frame {
+    background: linear-gradient(135deg, #d4c4a8, #b8a48a);
+    height: 240px;
+    border-radius: 120px 120px 20px 20px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+
+  .footer-about .about-frame svg { width: 100%; height: 100%; }
+
+  .footer-about .about-label {
+    font-family: 'Allura', cursive;
+    font-size: 42px;
+    color: var(--clay);
+    position: absolute;
+    top: -20px; left: 20px;
+    background: var(--cream-deep);
+    padding: 0 12px;
+    z-index: 2;
+  }
+
+  .footer-about .learn-more {
+    display: block;
+    padding: 14px;
+    background: var(--ink);
+    color: var(--cream);
+    text-align: center;
+    text-decoration: none;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    transition: background .3s;
+  }
+
+  .footer-about .learn-more:hover { background: var(--clay); }
+
+  .footer-bottom {
+    grid-column: 1 / -1;
+    border-top: 1px solid var(--taupe);
+    padding-top: 24px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--taupe-dark);
+    text-transform: uppercase;
+  }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 900px) {
+    nav { padding: 16px 24px; }
+    .nav-links { display: none; }
+    .hero { grid-template-columns: 1fr; padding: 120px 24px 60px; }
+    .hero-visual { height: 400px; }
+    .quick, .new-arrivals, .bestsellers, .newsletter { padding-left: 24px; padding-right: 24px; }
+    .quick-grid, .products-grid { grid-template-columns: 1fr; }
+    .bs-track { grid-template-columns: repeat(2, 1fr); }
+    .about { grid-template-columns: 1fr; padding: 80px 24px; gap: 50px; }
+    .about-img { height: 400px; }
+    .newsletter { grid-template-columns: 1fr; padding: 60px 24px; }
+    footer { grid-template-columns: 1fr; padding: 60px 24px 30px; gap: 40px; }
+    .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+    .hero h1 .accent { transform: none; }
+  }
+
+  /* subtle entry animation */
+  @keyframes riseIn { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+  .hero-text > * { animation: riseIn .9s ease-out both; }
+  .hero-text > *:nth-child(1) { animation-delay: .1s; }
+  .hero-text > *:nth-child(2) { animation-delay: .25s; }
+  .hero-text > *:nth-child(3) { animation-delay: .4s; }
+  .hero-text > *:nth-child(4) { animation-delay: .55s; }
+  .hero-visual { animation: riseIn 1.2s ease-out both; animation-delay: .3s; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">SAN<span class="amp">&</span>CHA</div>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#shop">Shop</a></li>
+    <li><a href="#nieuw">Nieuw</a></li>
+    <li><a href="#over">Over ons</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-cta">
+    <button class="icon-btn" aria-label="Zoeken">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
+    </button>
+    <button class="icon-btn" aria-label="Winkelwagen">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 6h18l-2 13H5L3 6zM8 6V4a4 4 0 018 0v2"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-text">
+    <span class="tag">Twee zussen, één droom</span>
+    <h1>Hippe mode<span class="accent">voor de trendy</span>vrouw</h1>
+    <p>Welkom bij Sancha. Sandra en Chantal selecteren met zorg de leukste damesmode, sieraden en accessoires, zodat jij elke dag kunt stralen in je eigen stijl.</p>
+    <div class="btn-group">
+      <a href="#shop" class="btn btn-dark">Shop de collectie</a>
+      <a href="#over" class="btn btn-outline">Ons verhaal</a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="hero-img main">
+      <svg viewBox="0 0 400 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="dress1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#e8d4bb"/>
+            <stop offset="1" stop-color="#b89578"/>
+          </linearGradient>
+        </defs>
+        <rect width="400" height="600" fill="url(#dress1)"/>
+        <!-- stylized female figure -->
+        <circle cx="200" cy="160" r="50" fill="#d9b899"/>
+        <path d="M150 200 Q200 220 250 200 L270 350 Q270 380 250 390 L220 400 Q200 460 200 540 L180 540 Q180 460 160 400 L130 390 Q110 380 110 350 Z" fill="#f0dcc2"/>
+        <path d="M150 200 Q200 220 250 200 L270 290 L130 290 Z" fill="#c9a481" opacity=".6"/>
+        <ellipse cx="200" cy="140" rx="55" ry="40" fill="#8b6a4e"/>
+      </svg>
+    </div>
+    <div class="hero-img accent">
+      <svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="dress2" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#d5c2a9"/>
+            <stop offset="1" stop-color="#a88a6c"/>
+          </linearGradient>
+        </defs>
+        <rect width="400" height="400" fill="url(#dress2)"/>
+        <!-- accessories -->
+        <circle cx="200" cy="200" r="80" fill="#f0dcc2" opacity=".3"/>
+        <path d="M140 180 L260 180 L250 280 Q200 300 150 280 Z" fill="#a8b19a"/>
+        <circle cx="170" cy="210" r="6" fill="#8a7558"/>
+        <circle cx="230" cy="210" r="6" fill="#8a7558"/>
+        <path d="M180 240 Q200 255 220 240" stroke="#8a7558" stroke-width="3" fill="none"/>
+      </svg>
+    </div>
+    <div class="deco-badge">
+      <div><span>nieuw</span>collectie 2026</div>
+    </div>
+  </div>
+</section>
+
+<!-- QUICK LINKS -->
+<section class="quick">
+  <div class="section-title">
+    <span class="pre">Snel naar</span>
+    <h2>Shop <span class="script">favorieten</span></h2>
+  </div>
+  <div class="quick-grid">
+    <a href="#" class="quick-card">
+      <div class="circle">
+        <svg viewBox="0 0 64 64"><rect width="64" height="64" fill="#e6c9b8"/><path d="M20 25 L44 25 L42 48 Q32 52 22 48 Z" fill="#8a7558"/><circle cx="32" cy="20" r="8" fill="#a88567"/></svg>
+      </div>
+      <span class="label">Dameskleding</span>
+    </a>
+    <a href="#" class="quick-card">
+      <div class="circle">
+        <svg viewBox="0 0 64 64"><rect width="64" height="64" fill="#a8b19a"/><circle cx="32" cy="32" r="6" fill="#fefcf8"/><path d="M32 12 L32 20 M32 44 L32 52 M12 32 L20 32 M44 32 L52 32" stroke="#fefcf8" stroke-width="2"/></svg>
+      </div>
+      <span class="label">Sieraden</span>
+    </a>
+    <a href="#" class="quick-card">
+      <div class="circle">
+        <svg viewBox="0 0 64 64"><rect width="64" height="64" fill="#c08870"/><path d="M16 30 L48 30 L45 50 L19 50 Z" fill="#fefcf8"/><path d="M24 30 Q24 20 32 20 Q40 20 40 30" stroke="#fefcf8" stroke-width="2" fill="none"/></svg>
+      </div>
+      <span class="label">Tassen</span>
+    </a>
+    <a href="#" class="quick-card">
+      <div class="circle">
+        <svg viewBox="0 0 64 64"><rect width="64" height="64" fill="#b8a48a"/><path d="M16 20 Q32 16 48 20 L44 44 Q32 40 20 44 Z" fill="#fefcf8"/></svg>
+      </div>
+      <span class="label">Sjaals</span>
+    </a>
+    <a href="#" class="quick-card">
+      <div class="circle">
+        <svg viewBox="0 0 64 64"><rect width="64" height="64" fill="#7d8971"/><circle cx="32" cy="36" r="16" fill="#fefcf8"/><rect x="28" y="16" width="8" height="16" fill="#fefcf8"/></svg>
+      </div>
+      <span class="label">Cadeaubon</span>
+    </a>
+    <a href="#" class="quick-card">
+      <div class="circle">
+        <svg viewBox="0 0 64 64"><rect width="64" height="64" fill="#e6c9b8"/><path d="M20 40 L32 18 L44 40 Z" fill="#8a7558"/><circle cx="32" cy="45" r="3" fill="#8a7558"/></svg>
+      </div>
+      <span class="label">Sale</span>
+    </a>
+  </div>
+</section>
+
+<!-- NEW ARRIVALS -->
+<section class="new-arrivals" id="nieuw">
+  <div class="new-header">
+    <h2>Nieuw <em class="serif" style="font-style:italic">binnen</em></h2>
+    <ul class="filter-pills">
+      <li><a href="#" class="active">Alles</a></li>
+      <li><a href="#">Jurken</a></li>
+      <li><a href="#">Tops</a></li>
+      <li><a href="#">Broeken</a></li>
+      <li><a href="#">Accessoires</a></li>
+      <li><a href="#">Sieraden</a></li>
+    </ul>
+  </div>
+
+  <div class="wave-frame">
+    <div class="products-grid">
+      <div class="product-card">
+        <div class="product-img">
+          <svg viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+            <rect width="300" height="400" fill="#e8dcc8"/>
+            <circle cx="150" cy="120" r="40" fill="#d9b899"/>
+            <path d="M110 160 Q150 175 190 160 L205 250 L95 250 Z" fill="#a8b19a"/>
+            <path d="M95 250 L205 250 L215 350 L85 350 Z" fill="#7d8971"/>
+            <circle cx="140" cy="115" r="3" fill="#2a2520"/>
+            <circle cx="160" cy="115" r="3" fill="#2a2520"/>
+          </svg>
+        </div>
+        <div class="product-category">Jurken</div>
+        <h3 class="product-title">Linnen zomerjurk<br/>in saliegroen</h3>
+        <a href="#" class="product-btn">Bekijk <em>het</em> Item</a>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img">
+          <svg viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+            <rect width="300" height="400" fill="#f0dcc2"/>
+            <circle cx="150" cy="120" r="40" fill="#d9b899"/>
+            <path d="M110 160 Q150 175 190 160 L200 240 L100 240 Z" fill="#fefcf8"/>
+            <path d="M100 240 L200 240 L210 350 L90 350 Z" fill="#c08870"/>
+            <path d="M100 240 Q150 250 200 240" stroke="#a8725c" stroke-width="2" fill="none"/>
+          </svg>
+        </div>
+        <div class="product-category">Tops</div>
+        <h3 class="product-title">Zachte blouse met<br/>bijpassende rok</h3>
+        <a href="#" class="product-btn">Bekijk <em>het</em> Item</a>
+      </div>
+
+      <div class="product-card">
+        <div class="product-img">
+          <svg viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
+            <rect width="300" height="400" fill="#d4c4a8"/>
+            <circle cx="150" cy="120" r="40" fill="#d9b899"/>
+            <path d="M110 160 Q150 175 190 160 L195 260 L105 260 Z" fill="#8a7558"/>
+            <path d="M105 260 L145 260 L140 350 L105 350 Z M155 260 L195 260 L195 350 L160 350 Z" fill="#2a2520"/>
+            <rect x="130" y="270" width="40" height="12" fill="#c08870"/>
+          </svg>
+        </div>
+        <div class="product-category">Totaal</div>
+        <h3 class="product-title">Klassieke look<br/>met statement riem</h3>
+        <a href="#" class="product-btn">Bekijk <em>het</em> Item</a>
+      </div>
+    </div>
+
+    <div class="carousel-nav">
+      <button aria-label="Vorige">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <button aria-label="Volgende">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="view-all">
+    <a href="#">Bekijk <em class="serif" style="font-style:italic;letter-spacing:1px;text-transform:lowercase">alle</em> items</a>
+  </div>
+</section>
+
+<!-- BEST SELLERS -->
+<section class="bestsellers" id="shop">
+  <div class="bs-header">
+    <h2>Onze <em class="serif" style="font-style:italic">bestsellers</em></h2>
+    <a href="#">Shop <em class="serif" style="font-style:italic;letter-spacing:1px;text-transform:lowercase">alle</em> producten</a>
+  </div>
+
+  <div class="bs-track-wrap">
+    <div class="bs-track">
+      <div class="bs-item">
+        <div class="new-tag">nieuw</div>
+        <div class="product-visual">
+          <svg width="120" height="120" viewBox="0 0 120 120">
+            <ellipse cx="60" cy="80" rx="40" ry="15" fill="#d4b896"/>
+            <path d="M30 80 Q60 50 90 80" fill="#e8cda8"/>
+            <rect x="55" y="65" width="10" height="20" fill="#a8855f"/>
+          </svg>
+        </div>
+        <a href="#" class="shop-now">Shop nu</a>
+      </div>
+
+      <div class="bs-item">
+        <div class="product-visual">
+          <svg width="120" height="120" viewBox="0 0 120 120">
+            <circle cx="40" cy="60" r="22" fill="none" stroke="#8a7558" stroke-width="3"/>
+            <circle cx="80" cy="60" r="22" fill="none" stroke="#8a7558" stroke-width="3"/>
+            <line x1="58" y1="60" x2="62" y2="60" stroke="#8a7558" stroke-width="3"/>
+            <line x1="18" y1="60" x2="12" y2="56" stroke="#8a7558" stroke-width="3"/>
+            <line x1="102" y1="60" x2="108" y2="56" stroke="#8a7558" stroke-width="3"/>
+          </svg>
+        </div>
+        <a href="#" class="shop-now">Shop nu</a>
+      </div>
+
+      <div class="bs-item">
+        <div class="product-visual">
+          <svg width="120" height="120" viewBox="0 0 120 120">
+            <rect x="20" y="25" width="80" height="70" fill="#a8b19a" rx="4"/>
+            <rect x="30" y="35" width="60" height="50" fill="#c8d0bb" rx="2"/>
+            <path d="M30 45 L90 45 M30 55 L90 55 M30 65 L90 65 M30 75 L90 75" stroke="#7d8971" stroke-width="1"/>
+          </svg>
+        </div>
+        <a href="#" class="shop-now">Shop nu</a>
+      </div>
+
+      <div class="bs-item">
+        <div class="product-visual">
+          <svg width="120" height="120" viewBox="0 0 120 120">
+            <circle cx="45" cy="50" r="10" fill="#f5f0e6" stroke="#c08870" stroke-width="2"/>
+            <circle cx="75" cy="50" r="10" fill="#f5f0e6" stroke="#c08870" stroke-width="2"/>
+            <path d="M45 62 L45 85 M75 62 L75 85" stroke="#c08870" stroke-width="2"/>
+          </svg>
+        </div>
+        <a href="#" class="shop-now">Shop nu</a>
+      </div>
+
+      <div class="bs-item">
+        <div class="product-visual">
+          <svg width="120" height="120" viewBox="0 0 120 120">
+            <rect x="30" y="30" width="60" height="70" rx="6" fill="#8a7558"/>
+            <rect x="35" y="35" width="50" height="60" rx="4" fill="#c08870"/>
+            <circle cx="60" cy="45" r="4" fill="#fefcf8"/>
+            <rect x="50" y="20" width="20" height="12" rx="4" fill="#8a7558"/>
+          </svg>
+        </div>
+        <a href="#" class="shop-now">Shop nu</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="over">
+  <div class="about-img">
+    <div class="main-frame">
+      <svg viewBox="0 0 400 520" preserveAspectRatio="xMidYMid slice">
+        <rect width="400" height="520" fill="#c9a88a"/>
+        <!-- two sisters stylized -->
+        <circle cx="140" cy="180" r="45" fill="#e8cda8"/>
+        <circle cx="260" cy="200" r="45" fill="#e8cda8"/>
+        <path d="M100 225 Q140 240 180 225 L195 360 Q195 390 175 400 L145 410 Q130 460 130 520 L105 520 Q105 460 95 410 L70 400 Q55 390 55 360 Z" fill="#a8b19a"/>
+        <path d="M220 245 Q260 260 300 245 L315 380 Q315 410 295 420 L265 430 Q250 480 250 520 L225 520 Q225 480 215 430 L195 420 Q180 410 180 380 Z" fill="#c08870"/>
+        <ellipse cx="140" cy="160" rx="50" ry="35" fill="#8b6a4e"/>
+        <ellipse cx="260" cy="180" rx="50" ry="35" fill="#a8855f"/>
+      </svg>
+    </div>
+    <div class="accent-circle">
+      <div>
+        <span class="script">sinds</span>
+        <span class="sub">2016</span>
+      </div>
+    </div>
+  </div>
+  <div class="about-text">
+    <span class="pre">Over Sancha</span>
+    <h2>Twee zussen, <span class="script">één droom</span></h2>
+    <p>Sancha is ontstaan uit de passie van Sandra en Chantal, twee zussen uit Tilburg met een oog voor stijl. Wat begon als een hobby naast hun werk in de zorg, groeide uit tot een liefdesproject vol hippe, trendy damesmode.</p>
+    <p>Bij ons vind je kleding, sieraden, tassen en accessoires die zorgvuldig zijn uitgekozen. Toegankelijk, persoonlijk, en altijd met een glimlach. We helpen je graag de perfecte look samenstellen, of je nu binnenloopt in de winkel of online shopt.</p>
+    <span class="signature">Sandra &amp; Chantal</span>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter">
+  <div class="newsletter-left">
+    <h3>Meld je aan voor <span class="script">updates</span></h3>
+    <p>*We beloven: geen spam, alleen de leukste aanbiedingen.</p>
+  </div>
+  <form class="newsletter-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Bedankt!';">
+    <input type="text" placeholder="Naam" required>
+    <input type="email" placeholder="E-mail" required>
+    <button type="submit">Inschrijven</button>
+  </form>
+</section>
+
+<!-- FOOTER -->
+<footer id="contact">
+  <div class="footer-logo">
+    <div class="logo-stamp">
+      <div class="stamp-text">
+        <div>Sandra</div>
+        <span class="initials">S&amp;C</span>
+        <div>Chantal</div>
+      </div>
+    </div>
+    <div class="socials">
+      <a href="#" aria-label="Instagram">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+      </a>
+      <a href="#" aria-label="Facebook">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3V2z"/></svg>
+      </a>
+      <a href="#" aria-label="TikTok">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 8a6 6 0 01-4-1.5V16a6 6 0 11-6-6v3a3 3 0 103 3V2h3a4 4 0 004 4v2z"/></svg>
+      </a>
+      <a href="#" aria-label="Pinterest">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M8 22l4-10M12 8a2 2 0 104 0 2 2 0 00-4 0z"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="footer-col">
+    <h4>Shop</h4>
+    <ul>
+      <li><a href="#">Dameskleding</a></li>
+      <li><a href="#">Sieraden</a></li>
+      <li><a href="#">Tassen</a></li>
+      <li><a href="#">Accessoires</a></li>
+      <li><a href="#">Sale</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-col">
+    <h4>Info</h4>
+    <ul>
+      <li><a href="#">Over ons</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">Openingstijden</a></li>
+      <li><a href="#">Verzending</a></li>
+      <li><a href="#">Retourneren</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-about">
+    <div class="about-frame">
+      <span class="about-label">kom langs</span>
+      <svg viewBox="0 0 400 240" preserveAspectRatio="xMidYMid slice">
+        <rect width="400" height="240" fill="#c9a88a"/>
+        <rect x="60" y="60" width="280" height="140" fill="#e8cda8"/>
+        <rect x="120" y="100" width="60" height="100" fill="#8a7558"/>
+        <rect x="220" y="100" width="60" height="100" fill="#8a7558"/>
+        <rect x="140" y="120" width="20" height="30" fill="#c8d0bb"/>
+        <rect x="240" y="120" width="20" height="30" fill="#c8d0bb"/>
+        <polygon points="60,60 200,20 340,60" fill="#8a7558"/>
+      </svg>
+    </div>
+    <a href="#" class="learn-more">Bezoek de winkel</a>
+  </div>
+
+  <div class="footer-bottom">
+    <div>© 2026 Sancha · Tilburg · Alle rechten voorbehouden</div>
+    <div>Juliana van Stolbergstraat · info@sancha.nl</div>
+  </div>
+</footer>
+
+</body>
+</html>
