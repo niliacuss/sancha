@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sancha — Hippe &amp; trendy damesmode | Tilburg</title>
+<title>Sancha — Hippe &amp; trendy damesmode in Tilburg</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Outfit:wght@300;400;500;600&family=Allura&display=swap" rel="stylesheet">
@@ -23,7 +23,6 @@
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
   html { scroll-behavior: smooth; }
 
   body {
@@ -58,6 +57,7 @@
     font-weight: 500;
     letter-spacing: 6px;
     color: var(--ink);
+    text-decoration: none;
   }
 
   .logo .amp { font-family: 'Allura', cursive; font-size: 32px; color: var(--clay); letter-spacing: 0; margin: 0 2px; }
@@ -94,23 +94,23 @@
 
   .nav-cta {
     display: flex;
-    gap: 18px;
+    gap: 14px;
     align-items: center;
   }
 
-  .icon-btn {
-    width: 38px; height: 38px;
-    border-radius: 50%;
-    border: 1px solid var(--taupe);
-    background: transparent;
-    display: grid;
-    place-items: center;
-    cursor: pointer;
-    transition: all .3s;
-    color: var(--ink);
+  .nav-btn {
+    padding: 10px 22px;
+    background: var(--ink);
+    color: var(--cream);
+    text-decoration: none;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-radius: 30px;
+    transition: background .3s;
   }
 
-  .icon-btn:hover { background: var(--ink); color: var(--cream); border-color: var(--ink); }
+  .nav-btn:hover { background: var(--clay); }
 
   /* ---------- HERO ---------- */
   .hero {
@@ -180,6 +180,9 @@
     font-family: 'Outfit', sans-serif;
     font-weight: 400;
     border: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
   }
 
   .btn-dark {
@@ -233,7 +236,7 @@
   .deco-badge {
     position: absolute;
     top: 20px; right: 0;
-    width: 120px; height: 120px;
+    width: 130px; height: 130px;
     background: var(--sage);
     border-radius: 50%;
     display: grid;
@@ -248,18 +251,78 @@
 
   @keyframes spin { to { transform: rotate(360deg); } }
 
-  .deco-badge span { display: block; font-family: 'Allura', cursive; font-size: 28px; text-transform: none; letter-spacing: 0; line-height: 1; }
+  .deco-badge span { display: block; font-family: 'Allura', cursive; font-size: 30px; text-transform: none; letter-spacing: 0; line-height: 1; margin-bottom: 4px; }
 
-  /* ---------- QUICK LINKS ---------- */
-  .quick {
+  /* ---------- WELKOM / INTRO ---------- */
+  .intro {
     padding: 100px 60px;
     background: var(--cream-deep);
+    text-align: center;
+  }
+
+  .intro-inner {
+    max-width: 780px;
+    margin: 0 auto;
+  }
+
+  .intro .pre {
+    display: block;
+    font-size: 12px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--clay);
+    margin-bottom: 18px;
+  }
+
+  .intro h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 4.5vw, 58px);
+    font-weight: 400;
+    line-height: 1.15;
+    margin-bottom: 28px;
+  }
+
+  .intro h2 .script {
+    font-family: 'Allura', cursive;
+    color: var(--clay);
+    font-size: 1.25em;
+  }
+
+  .intro p {
+    font-size: 17px;
+    color: var(--taupe-dark);
+    line-height: 1.9;
+    margin-bottom: 18px;
+  }
+
+  .intro-divider {
+    width: 80px;
+    height: 1px;
+    background: var(--taupe);
+    margin: 40px auto 0;
     position: relative;
+  }
+
+  .intro-divider::before {
+    content: '✦';
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--cream-deep);
+    padding: 0 14px;
+    color: var(--clay);
+    font-size: 14px;
+  }
+
+  /* ---------- WAT VIND JE BIJ ONS ---------- */
+  .assortiment {
+    padding: 120px 60px;
+    background: var(--cream);
   }
 
   .section-title {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 70px;
   }
 
   .section-title .pre {
@@ -285,321 +348,54 @@
     font-size: 1.3em;
   }
 
-  .quick-grid {
+  .categories-grid {
     max-width: 1100px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
   }
 
-  .quick-card {
-    display: flex;
-    align-items: center;
-    background: var(--white);
-    border-radius: 60px;
-    padding: 10px 28px 10px 10px;
-    gap: 18px;
-    text-decoration: none;
-    color: var(--ink);
-    transition: all .35s;
-    border: 1px solid transparent;
-  }
-
-  .quick-card:hover {
-    transform: translateY(-4px);
-    border-color: var(--clay);
-    box-shadow: 0 10px 30px rgba(42, 37, 32, 0.08);
-  }
-
-  .quick-card .circle {
-    width: 64px; height: 64px;
-    border-radius: 50%;
-    flex-shrink: 0;
-    overflow: hidden;
-  }
-
-  .quick-card .circle svg { width: 100%; height: 100%; }
-
-  .quick-card .label {
-    font-size: 12px;
-    letter-spacing: 2.5px;
-    text-transform: uppercase;
-    font-weight: 500;
-  }
-
-  /* ---------- BLOG / NIEUW ---------- */
-  .new-arrivals {
-    padding: 120px 60px 80px;
-    background: var(--cream);
-  }
-
-  .new-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-bottom: 50px;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-
-  .new-header h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(32px, 4vw, 48px);
-    font-weight: 400;
-  }
-
-  .filter-pills {
-    display: flex;
-    gap: 24px;
-    list-style: none;
-    flex-wrap: wrap;
-  }
-
-  .filter-pills li a {
-    font-size: 12px;
-    letter-spacing: 2.5px;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: var(--taupe-dark);
-    padding: 8px 4px;
-    transition: color .3s;
-    position: relative;
-  }
-
-  .filter-pills li a.active,
-  .filter-pills li a:hover {
-    color: var(--clay);
-  }
-
-  .filter-pills li a.active::after {
-    content: '';
-    position: absolute;
-    bottom: 0; left: 0; right: 0;
-    height: 2px;
-    background: var(--clay);
-  }
-
-  .wave-frame {
-    position: relative;
-    padding: 70px 40px;
-    background: var(--blush);
-  }
-
-  .wave-frame::before,
-  .wave-frame::after {
-    content: '';
-    position: absolute;
-    left: 0; right: 0;
-    height: 40px;
-    background-image: radial-gradient(circle at 20px 0, var(--cream) 20px, transparent 21px);
-    background-size: 40px 40px;
-    background-repeat: repeat-x;
-  }
-
-  .wave-frame::before { top: -1px; }
-  .wave-frame::after { bottom: -1px; transform: rotate(180deg); }
-
-  .products-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-
-  .product-card {
+  .category-card {
     text-align: center;
+    padding: 40px 24px;
     background: var(--white);
-    padding: 20px;
-    border-radius: 4px;
+    border-radius: 8px;
     border: 1px solid var(--blush);
-    transition: transform .4s;
+    transition: all .35s;
   }
 
-  .product-card:hover { transform: translateY(-8px); }
-
-  .product-img {
-    width: 100%;
-    aspect-ratio: 3/4;
-    margin-bottom: 20px;
-    overflow: hidden;
-    position: relative;
+  .category-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 40px rgba(42, 37, 32, 0.08);
+    border-color: var(--clay);
   }
 
-  .product-img svg { width: 100%; height: 100%; display: block; }
-
-  .product-category {
-    font-size: 11px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--clay);
-    margin-bottom: 8px;
-  }
-
-  .product-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 20px;
-    margin-bottom: 16px;
-    color: var(--ink);
-    line-height: 1.25;
-  }
-
-  .product-btn {
-    display: inline-block;
-    padding: 10px 28px;
-    background: transparent;
-    color: var(--ink);
-    text-decoration: none;
-    font-size: 11px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    border: 1px solid var(--ink);
-    border-radius: 30px;
-    transition: all .3s;
-  }
-
-  .product-btn:hover { background: var(--ink); color: var(--cream); }
-
-  .product-btn em {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    text-transform: lowercase;
-    letter-spacing: 1px;
-  }
-
-  .carousel-nav {
-    display: flex;
-    justify-content: center;
-    gap: 14px;
-    margin-top: 50px;
-  }
-
-  .carousel-nav button {
-    width: 42px; height: 42px;
+  .category-card .circle {
+    width: 90px; height: 90px;
+    margin: 0 auto 20px;
     border-radius: 50%;
-    background: var(--white);
-    border: 1px solid var(--taupe);
-    cursor: pointer;
-    display: grid;
-    place-items: center;
-    transition: all .3s;
-    color: var(--ink);
-  }
-
-  .carousel-nav button:hover { background: var(--ink); color: var(--cream); }
-
-  .view-all {
-    text-align: center;
-    padding: 30px;
+    overflow: hidden;
     background: var(--blush);
   }
 
-  .view-all a {
-    color: var(--ink);
-    text-decoration: underline;
-    text-underline-offset: 6px;
-    font-size: 12px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-  }
+  .category-card .circle svg { width: 100%; height: 100%; }
 
-  /* ---------- BEST SELLERS ---------- */
-  .bestsellers {
-    padding: 80px 60px;
-    background: var(--cream);
-  }
-
-  .bs-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto 50px;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-
-  .bs-header h2 {
+  .category-card h3 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(28px, 3.5vw, 42px);
-    font-weight: 400;
-  }
-
-  .bs-header a {
-    font-size: 11px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--ink);
-    text-decoration: underline;
-    text-underline-offset: 4px;
-  }
-
-  .bs-track-wrap {
-    background: var(--sand);
-    padding: 40px 20px;
-    position: relative;
-  }
-
-  .bs-track {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 16px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  .bs-item {
-    background: var(--white);
-    padding: 20px;
-    aspect-ratio: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: relative;
-    transition: transform .3s;
-  }
-
-  .bs-item:hover { transform: scale(1.03); }
-
-  .bs-item .product-visual {
-    flex: 1;
-    display: grid;
-    place-items: center;
-    padding: 10px;
-  }
-
-  .bs-item .product-visual svg { max-width: 100%; max-height: 100%; }
-
-  .bs-item .shop-now {
-    text-align: center;
-    font-size: 11px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--ink);
-    text-decoration: underline;
-    text-underline-offset: 4px;
-    padding-top: 8px;
-  }
-
-  .new-tag {
-    position: absolute;
-    top: -10px; left: -10px;
-    width: 48px; height: 48px;
-    background: var(--clay);
-    color: var(--white);
-    border-radius: 50%;
-    display: grid;
-    place-items: center;
-    font-size: 10px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+    font-size: 22px;
+    margin-bottom: 10px;
     font-weight: 500;
-    transform: rotate(-12deg);
   }
 
-  /* ---------- ABOUT ---------- */
-  .about {
+  .category-card p {
+    font-size: 14px;
+    color: var(--taupe-dark);
+    line-height: 1.5;
+  }
+
+  /* ---------- VISIT / WINKEL INFO ---------- */
+  .visit {
     padding: 120px 60px;
     background: var(--cream-deep);
     display: grid;
@@ -608,23 +404,23 @@
     align-items: center;
   }
 
-  .about-img {
+  .visit-img {
     position: relative;
-    height: 520px;
+    height: 560px;
   }
 
-  .about-img .main-frame {
+  .visit-img .main-frame {
     width: 80%;
     height: 100%;
-    background: linear-gradient(135deg, #d4c4a8, #b8a48a);
+    background: linear-gradient(135deg, #c9a88a, #a88567);
     border-radius: 300px 300px 40px 40px;
     overflow: hidden;
     position: relative;
   }
 
-  .about-img .main-frame svg { width: 100%; height: 100%; }
+  .visit-img .main-frame svg { width: 100%; height: 100%; }
 
-  .about-img .accent-circle {
+  .visit-img .accent-circle {
     position: absolute;
     width: 180px; height: 180px;
     background: var(--sage);
@@ -639,7 +435,7 @@
   .accent-circle .script { font-size: 40px; line-height: 1; }
   .accent-circle .sub { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; margin-top: 6px; }
 
-  .about-text .pre {
+  .visit-info .pre {
     font-size: 12px;
     letter-spacing: 4px;
     text-transform: uppercase;
@@ -648,109 +444,247 @@
     display: block;
   }
 
-  .about-text h2 {
+  .visit-info h2 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(36px, 4vw, 56px);
+    font-size: clamp(36px, 4vw, 54px);
     font-weight: 400;
     line-height: 1.1;
     margin-bottom: 30px;
   }
 
-  .about-text h2 .script {
+  .visit-info h2 .script {
     font-family: 'Allura', cursive;
     color: var(--clay);
     font-size: 1.2em;
   }
 
-  .about-text p {
+  .visit-info > p {
     font-size: 16px;
     color: var(--taupe-dark);
-    margin-bottom: 20px;
+    margin-bottom: 32px;
     line-height: 1.8;
+  }
+
+  .info-block {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 26px;
+    align-items: flex-start;
+  }
+
+  .info-block .icon {
+    width: 42px; height: 42px;
+    border-radius: 50%;
+    border: 1px solid var(--taupe);
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    color: var(--clay);
+  }
+
+  .info-block h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    margin-bottom: 4px;
+    font-weight: 500;
+  }
+
+  .info-block p {
+    font-size: 14px;
+    color: var(--taupe-dark);
+    line-height: 1.7;
+  }
+
+  .info-block strong { color: var(--ink); font-weight: 500; }
+
+  .visit-cta {
+    margin-top: 34px;
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  /* ---------- OVER DE ZUSSEN ---------- */
+  .sisters {
+    padding: 120px 60px;
+    background: var(--cream);
+  }
+
+  .sisters-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .sisters-text .pre {
+    font-size: 12px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--clay);
+    margin-bottom: 18px;
+    display: block;
+  }
+
+  .sisters-text h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(34px, 4vw, 50px);
+    font-weight: 400;
+    line-height: 1.15;
+    margin-bottom: 24px;
+  }
+
+  .sisters-text h2 .script {
+    font-family: 'Allura', cursive;
+    color: var(--clay);
+  }
+
+  .sisters-text p {
+    font-size: 16px;
+    color: var(--taupe-dark);
+    line-height: 1.85;
+    margin-bottom: 18px;
   }
 
   .signature {
     font-family: 'Allura', cursive;
-    font-size: 38px;
+    font-size: 40px;
     color: var(--ink);
     margin-top: 20px;
     display: block;
   }
 
-  /* ---------- NEWSLETTER ---------- */
-  .newsletter {
-    padding: 80px 60px;
-    background: var(--white);
-    display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 40px;
-    align-items: center;
+  .sisters-img {
+    position: relative;
+    height: 540px;
+  }
+
+  .sisters-img .frame {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #d4c4a8, #b8a48a);
+    border-radius: 40px 300px 40px 300px;
+    overflow: hidden;
+  }
+
+  .sisters-img .frame svg { width: 100%; height: 100%; }
+
+  .sisters-img .tape {
+    position: absolute;
+    top: 30px; left: -20px;
+    padding: 12px 24px;
+    background: var(--sage);
+    color: var(--white);
+    font-family: 'Allura', cursive;
+    font-size: 26px;
+    transform: rotate(-8deg);
+    box-shadow: 0 4px 10px rgba(0,0,0,.1);
+  }
+
+  /* ---------- GALLERY / SFEER ---------- */
+  .gallery {
+    padding: 100px 60px;
+    background: var(--cream-deep);
+  }
+
+  .gallery-grid {
     max-width: 1200px;
     margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
   }
 
-  .newsletter-left h3 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 32px;
-    font-weight: 400;
-    margin-bottom: 6px;
-  }
-
-  .newsletter-left h3 .script {
-    font-family: 'Allura', cursive;
-    color: var(--clay);
-  }
-
-  .newsletter-left p {
-    font-size: 12px;
-    color: var(--taupe-dark);
-    font-style: italic;
-  }
-
-  .newsletter-form {
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-  }
-
-  .newsletter-form input {
-    padding: 16px 24px;
-    background: transparent;
-    border: 1px solid var(--taupe);
-    border-radius: 2px;
-    font-family: 'Outfit', sans-serif;
-    font-size: 13px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--ink);
-    min-width: 200px;
-  }
-
-  .newsletter-form input::placeholder { color: var(--taupe); }
-  .newsletter-form input:focus { outline: none; border-color: var(--clay); }
-
-  .newsletter-form button {
-    padding: 16px 32px;
-    background: var(--ink);
-    color: var(--cream);
-    border: none;
-    font-family: 'Outfit', sans-serif;
-    font-size: 12px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
+  .gallery-item {
+    aspect-ratio: 1;
+    overflow: hidden;
+    position: relative;
     cursor: pointer;
+    transition: transform .4s;
+  }
+
+  .gallery-item:hover { transform: scale(1.02); }
+
+  .gallery-item svg { width: 100%; height: 100%; display: block; }
+
+  .gallery-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(42, 37, 32, 0);
+    display: grid;
+    place-items: center;
     transition: background .3s;
   }
 
-  .newsletter-form button:hover { background: var(--clay); }
+  .gallery-item:hover .gallery-overlay {
+    background: rgba(42, 37, 32, 0.3);
+  }
+
+  .gallery-cta {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 13px;
+    color: var(--taupe-dark);
+  }
+
+  .gallery-cta a {
+    color: var(--clay);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+
+  /* ---------- CALL TO VISIT ---------- */
+  .cta-strip {
+    padding: 100px 60px;
+    background: var(--ink);
+    color: var(--cream);
+    text-align: center;
+  }
+
+  .cta-strip h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 5vw, 64px);
+    font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: 24px;
+  }
+
+  .cta-strip h2 .script {
+    font-family: 'Allura', cursive;
+    color: var(--blush);
+    font-size: 1.2em;
+  }
+
+  .cta-strip p {
+    font-size: 17px;
+    color: var(--sand);
+    max-width: 560px;
+    margin: 0 auto 40px;
+    line-height: 1.8;
+  }
+
+  .cta-strip .btn-dark {
+    background: var(--cream);
+    color: var(--ink);
+  }
+
+  .cta-strip .btn-dark:hover {
+    background: var(--clay);
+    color: var(--cream);
+  }
 
   /* ---------- FOOTER ---------- */
   footer {
     background: var(--cream-deep);
     padding: 80px 60px 40px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 50px;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 60px;
     align-items: start;
   }
 
@@ -804,26 +738,30 @@
   }
 
   .socials a {
-    width: 34px; height: 34px;
+    width: 36px; height: 36px;
     border-radius: 50%;
     background: var(--ink);
     color: var(--cream);
     display: grid;
     place-items: center;
     text-decoration: none;
-    font-size: 14px;
     transition: all .3s;
   }
 
   .socials a:hover { background: var(--clay); transform: translateY(-2px); }
 
   .footer-col h4 {
-    font-size: 12px;
-    letter-spacing: 4px;
-    text-transform: uppercase;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
     color: var(--ink);
-    margin-bottom: 24px;
+    margin-bottom: 20px;
     font-weight: 500;
+  }
+
+  .footer-col p, .footer-col li {
+    color: var(--taupe-dark);
+    font-size: 14px;
+    line-height: 1.8;
   }
 
   .footer-col ul {
@@ -831,60 +769,22 @@
   }
 
   .footer-col ul li {
-    margin-bottom: 12px;
+    margin-bottom: 8px;
   }
 
-  .footer-col ul a {
-    color: var(--taupe-dark);
+  .footer-col ul li strong {
+    color: var(--ink);
+    font-weight: 500;
+    margin-right: 6px;
+  }
+
+  .footer-col a {
+    color: var(--clay);
     text-decoration: none;
-    font-size: 12px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
     transition: color .3s;
   }
 
-  .footer-col ul a:hover { color: var(--clay); }
-
-  .footer-about {
-    position: relative;
-  }
-
-  .footer-about .about-frame {
-    background: linear-gradient(135deg, #d4c4a8, #b8a48a);
-    height: 240px;
-    border-radius: 120px 120px 20px 20px;
-    position: relative;
-    overflow: hidden;
-    margin-bottom: 20px;
-  }
-
-  .footer-about .about-frame svg { width: 100%; height: 100%; }
-
-  .footer-about .about-label {
-    font-family: 'Allura', cursive;
-    font-size: 42px;
-    color: var(--clay);
-    position: absolute;
-    top: -20px; left: 20px;
-    background: var(--cream-deep);
-    padding: 0 12px;
-    z-index: 2;
-  }
-
-  .footer-about .learn-more {
-    display: block;
-    padding: 14px;
-    background: var(--ink);
-    color: var(--cream);
-    text-align: center;
-    text-decoration: none;
-    font-size: 11px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    transition: background .3s;
-  }
-
-  .footer-about .learn-more:hover { background: var(--clay); }
+  .footer-col a:hover { color: var(--ink); }
 
   .footer-bottom {
     grid-column: 1 / -1;
@@ -906,18 +806,18 @@
     .nav-links { display: none; }
     .hero { grid-template-columns: 1fr; padding: 120px 24px 60px; }
     .hero-visual { height: 400px; }
-    .quick, .new-arrivals, .bestsellers, .newsletter { padding-left: 24px; padding-right: 24px; }
-    .quick-grid, .products-grid { grid-template-columns: 1fr; }
-    .bs-track { grid-template-columns: repeat(2, 1fr); }
-    .about { grid-template-columns: 1fr; padding: 80px 24px; gap: 50px; }
-    .about-img { height: 400px; }
-    .newsletter { grid-template-columns: 1fr; padding: 60px 24px; }
+    .intro, .assortiment, .gallery, .cta-strip { padding-left: 24px; padding-right: 24px; }
+    .categories-grid { grid-template-columns: repeat(2, 1fr); }
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+    .visit, .sisters-inner { grid-template-columns: 1fr; gap: 50px; }
+    .visit { padding: 80px 24px; }
+    .sisters { padding: 80px 24px; }
+    .visit-img, .sisters-img { height: 420px; }
     footer { grid-template-columns: 1fr; padding: 60px 24px 30px; gap: 40px; }
     .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
     .hero h1 .accent { transform: none; }
   }
 
-  /* subtle entry animation */
   @keyframes riseIn { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
   .hero-text > * { animation: riseIn .9s ease-out both; }
   .hero-text > *:nth-child(1) { animation-delay: .1s; }
@@ -931,21 +831,16 @@
 
 <!-- NAV -->
 <nav>
-  <div class="logo">SAN<span class="amp">&</span>CHA</div>
+  <a href="#home" class="logo">SAN<span class="amp">&</span>CHA</a>
   <ul class="nav-links">
     <li><a href="#home">Home</a></li>
-    <li><a href="#shop">Shop</a></li>
-    <li><a href="#nieuw">Nieuw</a></li>
+    <li><a href="#assortiment">Assortiment</a></li>
+    <li><a href="#winkel">De winkel</a></li>
     <li><a href="#over">Over ons</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="contact.html">Contact</a></li>
   </ul>
   <div class="nav-cta">
-    <button class="icon-btn" aria-label="Zoeken">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
-    </button>
-    <button class="icon-btn" aria-label="Winkelwagen">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 6h18l-2 13H5L3 6zM8 6V4a4 4 0 018 0v2"/></svg>
-    </button>
+    <a href="contact.html" class="nav-btn">Kom langs</a>
   </div>
 </nav>
 
@@ -954,9 +849,11 @@
   <div class="hero-text">
     <span class="tag">Twee zussen, één droom</span>
     <h1>Hippe mode<span class="accent">voor de trendy</span>vrouw</h1>
-    <p>Welkom bij Sancha. Sandra en Chantal selecteren met zorg de leukste damesmode, sieraden en accessoires, zodat jij elke dag kunt stralen in je eigen stijl.</p>
+    <p>Welkom bij Sancha in Tilburg. Sandra en Chantal selecteren met zorg de leukste damesmode, sieraden en accessoires. Kom langs, pas rustig, en laat je adviseren door twee zussen met een passie voor stijl.</p>
     <div class="btn-group">
-      <a href="#shop" class="btn btn-dark">Shop de collectie</a>
+      <a href="#winkel" class="btn btn-dark">Bezoek onze winkel
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
       <a href="#over" class="btn btn-outline">Ons verhaal</a>
     </div>
   </div>
@@ -970,7 +867,6 @@
           </linearGradient>
         </defs>
         <rect width="400" height="600" fill="url(#dress1)"/>
-        <!-- stylized female figure -->
         <circle cx="200" cy="160" r="50" fill="#d9b899"/>
         <path d="M150 200 Q200 220 250 200 L270 350 Q270 380 250 390 L220 400 Q200 460 200 540 L180 540 Q180 460 160 400 L130 390 Q110 380 110 350 Z" fill="#f0dcc2"/>
         <path d="M150 200 Q200 220 250 200 L270 290 L130 290 Z" fill="#c9a481" opacity=".6"/>
@@ -986,7 +882,6 @@
           </linearGradient>
         </defs>
         <rect width="400" height="400" fill="url(#dress2)"/>
-        <!-- accessories -->
         <circle cx="200" cy="200" r="80" fill="#f0dcc2" opacity=".3"/>
         <path d="M140 180 L260 180 L250 280 Q200 300 150 280 Z" fill="#a8b19a"/>
         <circle cx="170" cy="210" r="6" fill="#8a7558"/>
@@ -995,252 +890,254 @@
       </svg>
     </div>
     <div class="deco-badge">
-      <div><span>nieuw</span>collectie 2026</div>
+      <div><span>welkom</span>in Tilburg</div>
     </div>
   </div>
 </section>
 
-<!-- QUICK LINKS -->
-<section class="quick">
+<!-- INTRO / WELKOM -->
+<section class="intro">
+  <div class="intro-inner">
+    <span class="pre">Fijn dat je er bent</span>
+    <h2>Een persoonlijke <span class="script">boetiek</span> waar iedereen zich thuis voelt</h2>
+    <p>Bij Sancha draait het om meer dan alleen kleding. Het is een plek waar je even kunt ontsnappen, rustig kunt passen, en met een eerlijk advies naar huis gaat. We kennen onze klanten graag bij naam, en helpen je graag de perfecte outfit samen te stellen.</p>
+    <p>Of je nu iets zoekt voor een bijzondere gelegenheid, een cadeau voor een vriendin, of gewoon zin hebt in iets nieuws: we denken met je mee.</p>
+    <div class="intro-divider"></div>
+  </div>
+</section>
+
+<!-- ASSORTIMENT -->
+<section class="assortiment" id="assortiment">
   <div class="section-title">
-    <span class="pre">Snel naar</span>
-    <h2>Shop <span class="script">favorieten</span></h2>
+    <span class="pre">Wat vind je bij ons</span>
+    <h2>Ons <span class="script">assortiment</span></h2>
   </div>
-  <div class="quick-grid">
-    <a href="#" class="quick-card">
+  <div class="categories-grid">
+    <div class="category-card">
       <div class="circle">
-        <svg viewBox="0 0 64 64"><rect width="64" height="64" fill="#e6c9b8"/><path d="M20 25 L44 25 L42 48 Q32 52 22 48 Z" fill="#8a7558"/><circle cx="32" cy="20" r="8" fill="#a88567"/></svg>
+        <svg viewBox="0 0 90 90"><rect width="90" height="90" fill="#e6c9b8"/><circle cx="45" cy="30" r="10" fill="#a88567"/><path d="M28 42 Q45 50 62 42 L66 68 Q45 74 24 68 Z" fill="#8a7558"/></svg>
       </div>
-      <span class="label">Dameskleding</span>
-    </a>
-    <a href="#" class="quick-card">
-      <div class="circle">
-        <svg viewBox="0 0 64 64"><rect width="64" height="64" fill="#a8b19a"/><circle cx="32" cy="32" r="6" fill="#fefcf8"/><path d="M32 12 L32 20 M32 44 L32 52 M12 32 L20 32 M44 32 L52 32" stroke="#fefcf8" stroke-width="2"/></svg>
-      </div>
-      <span class="label">Sieraden</span>
-    </a>
-    <a href="#" class="quick-card">
-      <div class="circle">
-        <svg viewBox="0 0 64 64"><rect width="64" height="64" fill="#c08870"/><path d="M16 30 L48 30 L45 50 L19 50 Z" fill="#fefcf8"/><path d="M24 30 Q24 20 32 20 Q40 20 40 30" stroke="#fefcf8" stroke-width="2" fill="none"/></svg>
-      </div>
-      <span class="label">Tassen</span>
-    </a>
-    <a href="#" class="quick-card">
-      <div class="circle">
-        <svg viewBox="0 0 64 64"><rect width="64" height="64" fill="#b8a48a"/><path d="M16 20 Q32 16 48 20 L44 44 Q32 40 20 44 Z" fill="#fefcf8"/></svg>
-      </div>
-      <span class="label">Sjaals</span>
-    </a>
-    <a href="#" class="quick-card">
-      <div class="circle">
-        <svg viewBox="0 0 64 64"><rect width="64" height="64" fill="#7d8971"/><circle cx="32" cy="36" r="16" fill="#fefcf8"/><rect x="28" y="16" width="8" height="16" fill="#fefcf8"/></svg>
-      </div>
-      <span class="label">Cadeaubon</span>
-    </a>
-    <a href="#" class="quick-card">
-      <div class="circle">
-        <svg viewBox="0 0 64 64"><rect width="64" height="64" fill="#e6c9b8"/><path d="M20 40 L32 18 L44 40 Z" fill="#8a7558"/><circle cx="32" cy="45" r="3" fill="#8a7558"/></svg>
-      </div>
-      <span class="label">Sale</span>
-    </a>
-  </div>
-</section>
-
-<!-- NEW ARRIVALS -->
-<section class="new-arrivals" id="nieuw">
-  <div class="new-header">
-    <h2>Nieuw <em class="serif" style="font-style:italic">binnen</em></h2>
-    <ul class="filter-pills">
-      <li><a href="#" class="active">Alles</a></li>
-      <li><a href="#">Jurken</a></li>
-      <li><a href="#">Tops</a></li>
-      <li><a href="#">Broeken</a></li>
-      <li><a href="#">Accessoires</a></li>
-      <li><a href="#">Sieraden</a></li>
-    </ul>
-  </div>
-
-  <div class="wave-frame">
-    <div class="products-grid">
-      <div class="product-card">
-        <div class="product-img">
-          <svg viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
-            <rect width="300" height="400" fill="#e8dcc8"/>
-            <circle cx="150" cy="120" r="40" fill="#d9b899"/>
-            <path d="M110 160 Q150 175 190 160 L205 250 L95 250 Z" fill="#a8b19a"/>
-            <path d="M95 250 L205 250 L215 350 L85 350 Z" fill="#7d8971"/>
-            <circle cx="140" cy="115" r="3" fill="#2a2520"/>
-            <circle cx="160" cy="115" r="3" fill="#2a2520"/>
-          </svg>
-        </div>
-        <div class="product-category">Jurken</div>
-        <h3 class="product-title">Linnen zomerjurk<br/>in saliegroen</h3>
-        <a href="#" class="product-btn">Bekijk <em>het</em> Item</a>
-      </div>
-
-      <div class="product-card">
-        <div class="product-img">
-          <svg viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
-            <rect width="300" height="400" fill="#f0dcc2"/>
-            <circle cx="150" cy="120" r="40" fill="#d9b899"/>
-            <path d="M110 160 Q150 175 190 160 L200 240 L100 240 Z" fill="#fefcf8"/>
-            <path d="M100 240 L200 240 L210 350 L90 350 Z" fill="#c08870"/>
-            <path d="M100 240 Q150 250 200 240" stroke="#a8725c" stroke-width="2" fill="none"/>
-          </svg>
-        </div>
-        <div class="product-category">Tops</div>
-        <h3 class="product-title">Zachte blouse met<br/>bijpassende rok</h3>
-        <a href="#" class="product-btn">Bekijk <em>het</em> Item</a>
-      </div>
-
-      <div class="product-card">
-        <div class="product-img">
-          <svg viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice">
-            <rect width="300" height="400" fill="#d4c4a8"/>
-            <circle cx="150" cy="120" r="40" fill="#d9b899"/>
-            <path d="M110 160 Q150 175 190 160 L195 260 L105 260 Z" fill="#8a7558"/>
-            <path d="M105 260 L145 260 L140 350 L105 350 Z M155 260 L195 260 L195 350 L160 350 Z" fill="#2a2520"/>
-            <rect x="130" y="270" width="40" height="12" fill="#c08870"/>
-          </svg>
-        </div>
-        <div class="product-category">Totaal</div>
-        <h3 class="product-title">Klassieke look<br/>met statement riem</h3>
-        <a href="#" class="product-btn">Bekijk <em>het</em> Item</a>
-      </div>
+      <h3>Dameskleding</h3>
+      <p>Hippe, trendy stukken in diverse maten. Van casual tot speciale gelegenheden.</p>
     </div>
-
-    <div class="carousel-nav">
-      <button aria-label="Vorige">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
-      </button>
-      <button aria-label="Volgende">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
-      </button>
+    <div class="category-card">
+      <div class="circle">
+        <svg viewBox="0 0 90 90"><rect width="90" height="90" fill="#a8b19a"/><circle cx="45" cy="45" r="8" fill="#fefcf8"/><path d="M45 20 L45 30 M45 60 L45 70 M20 45 L30 45 M60 45 L70 45" stroke="#fefcf8" stroke-width="2"/><circle cx="45" cy="45" r="22" fill="none" stroke="#fefcf8" stroke-width="1"/></svg>
+      </div>
+      <h3>Sieraden</h3>
+      <p>Unieke sieraden met oog voor detail. Iets subtiels of een echte eyecatcher.</p>
     </div>
-  </div>
-
-  <div class="view-all">
-    <a href="#">Bekijk <em class="serif" style="font-style:italic;letter-spacing:1px;text-transform:lowercase">alle</em> items</a>
-  </div>
-</section>
-
-<!-- BEST SELLERS -->
-<section class="bestsellers" id="shop">
-  <div class="bs-header">
-    <h2>Onze <em class="serif" style="font-style:italic">bestsellers</em></h2>
-    <a href="#">Shop <em class="serif" style="font-style:italic;letter-spacing:1px;text-transform:lowercase">alle</em> producten</a>
-  </div>
-
-  <div class="bs-track-wrap">
-    <div class="bs-track">
-      <div class="bs-item">
-        <div class="new-tag">nieuw</div>
-        <div class="product-visual">
-          <svg width="120" height="120" viewBox="0 0 120 120">
-            <ellipse cx="60" cy="80" rx="40" ry="15" fill="#d4b896"/>
-            <path d="M30 80 Q60 50 90 80" fill="#e8cda8"/>
-            <rect x="55" y="65" width="10" height="20" fill="#a8855f"/>
-          </svg>
-        </div>
-        <a href="#" class="shop-now">Shop nu</a>
+    <div class="category-card">
+      <div class="circle">
+        <svg viewBox="0 0 90 90"><rect width="90" height="90" fill="#c08870"/><path d="M22 40 L68 40 L64 72 L26 72 Z" fill="#fefcf8"/><path d="M34 40 Q34 26 45 26 Q56 26 56 40" stroke="#fefcf8" stroke-width="2" fill="none"/></svg>
       </div>
-
-      <div class="bs-item">
-        <div class="product-visual">
-          <svg width="120" height="120" viewBox="0 0 120 120">
-            <circle cx="40" cy="60" r="22" fill="none" stroke="#8a7558" stroke-width="3"/>
-            <circle cx="80" cy="60" r="22" fill="none" stroke="#8a7558" stroke-width="3"/>
-            <line x1="58" y1="60" x2="62" y2="60" stroke="#8a7558" stroke-width="3"/>
-            <line x1="18" y1="60" x2="12" y2="56" stroke="#8a7558" stroke-width="3"/>
-            <line x1="102" y1="60" x2="108" y2="56" stroke="#8a7558" stroke-width="3"/>
-          </svg>
-        </div>
-        <a href="#" class="shop-now">Shop nu</a>
+      <h3>Tassen</h3>
+      <p>Handige dagtassen, feestelijke clutches en alles ertussenin.</p>
+    </div>
+    <div class="category-card">
+      <div class="circle">
+        <svg viewBox="0 0 90 90"><rect width="90" height="90" fill="#b8a48a"/><path d="M22 28 Q45 24 68 28 L62 62 Q45 58 28 62 Z" fill="#fefcf8"/><path d="M28 40 Q45 44 62 40" stroke="#b8a48a" stroke-width="1" fill="none"/></svg>
       </div>
-
-      <div class="bs-item">
-        <div class="product-visual">
-          <svg width="120" height="120" viewBox="0 0 120 120">
-            <rect x="20" y="25" width="80" height="70" fill="#a8b19a" rx="4"/>
-            <rect x="30" y="35" width="60" height="50" fill="#c8d0bb" rx="2"/>
-            <path d="M30 45 L90 45 M30 55 L90 55 M30 65 L90 65 M30 75 L90 75" stroke="#7d8971" stroke-width="1"/>
-          </svg>
-        </div>
-        <a href="#" class="shop-now">Shop nu</a>
-      </div>
-
-      <div class="bs-item">
-        <div class="product-visual">
-          <svg width="120" height="120" viewBox="0 0 120 120">
-            <circle cx="45" cy="50" r="10" fill="#f5f0e6" stroke="#c08870" stroke-width="2"/>
-            <circle cx="75" cy="50" r="10" fill="#f5f0e6" stroke="#c08870" stroke-width="2"/>
-            <path d="M45 62 L45 85 M75 62 L75 85" stroke="#c08870" stroke-width="2"/>
-          </svg>
-        </div>
-        <a href="#" class="shop-now">Shop nu</a>
-      </div>
-
-      <div class="bs-item">
-        <div class="product-visual">
-          <svg width="120" height="120" viewBox="0 0 120 120">
-            <rect x="30" y="30" width="60" height="70" rx="6" fill="#8a7558"/>
-            <rect x="35" y="35" width="50" height="60" rx="4" fill="#c08870"/>
-            <circle cx="60" cy="45" r="4" fill="#fefcf8"/>
-            <rect x="50" y="20" width="20" height="12" rx="4" fill="#8a7558"/>
-          </svg>
-        </div>
-        <a href="#" class="shop-now">Shop nu</a>
-      </div>
+      <h3>Sjaals &amp; accessoires</h3>
+      <p>Om je outfit af te maken. Sjaals, riemen, haaraccessoires en meer.</p>
     </div>
   </div>
 </section>
 
-<!-- ABOUT -->
-<section class="about" id="over">
-  <div class="about-img">
+<!-- VISIT / WINKEL INFO -->
+<section class="visit" id="winkel">
+  <div class="visit-img">
     <div class="main-frame">
-      <svg viewBox="0 0 400 520" preserveAspectRatio="xMidYMid slice">
-        <rect width="400" height="520" fill="#c9a88a"/>
-        <!-- two sisters stylized -->
-        <circle cx="140" cy="180" r="45" fill="#e8cda8"/>
-        <circle cx="260" cy="200" r="45" fill="#e8cda8"/>
-        <path d="M100 225 Q140 240 180 225 L195 360 Q195 390 175 400 L145 410 Q130 460 130 520 L105 520 Q105 460 95 410 L70 400 Q55 390 55 360 Z" fill="#a8b19a"/>
-        <path d="M220 245 Q260 260 300 245 L315 380 Q315 410 295 420 L265 430 Q250 480 250 520 L225 520 Q225 480 215 430 L195 420 Q180 410 180 380 Z" fill="#c08870"/>
-        <ellipse cx="140" cy="160" rx="50" ry="35" fill="#8b6a4e"/>
-        <ellipse cx="260" cy="180" rx="50" ry="35" fill="#a8855f"/>
+      <svg viewBox="0 0 400 560" preserveAspectRatio="xMidYMid slice">
+        <rect width="400" height="560" fill="#c9a88a"/>
+        <!-- stylized storefront -->
+        <rect x="60" y="120" width="280" height="380" fill="#e8cda8"/>
+        <polygon points="60,120 200,60 340,120" fill="#8a7558"/>
+        <rect x="90" y="160" width="90" height="220" fill="#2a2520"/>
+        <rect x="220" y="160" width="90" height="220" fill="#2a2520"/>
+        <rect x="100" y="170" width="70" height="100" fill="#d4b8a0"/>
+        <rect x="230" y="170" width="70" height="100" fill="#d4b8a0"/>
+        <rect x="170" y="400" width="60" height="100" fill="#8a7558"/>
+        <circle cx="215" cy="450" r="2" fill="#c08870"/>
+        <text x="200" y="100" text-anchor="middle" fill="#fefcf8" font-family="Cormorant Garamond" font-size="28" letter-spacing="4">SANCHA</text>
       </svg>
     </div>
     <div class="accent-circle">
       <div>
-        <span class="script">sinds</span>
-        <span class="sub">2016</span>
+        <span class="script">open</span>
+        <span class="sub">di - za</span>
       </div>
     </div>
   </div>
-  <div class="about-text">
-    <span class="pre">Over Sancha</span>
-    <h2>Twee zussen, <span class="script">één droom</span></h2>
-    <p>Sancha is ontstaan uit de passie van Sandra en Chantal, twee zussen uit Tilburg met een oog voor stijl. Wat begon als een hobby naast hun werk in de zorg, groeide uit tot een liefdesproject vol hippe, trendy damesmode.</p>
-    <p>Bij ons vind je kleding, sieraden, tassen en accessoires die zorgvuldig zijn uitgekozen. Toegankelijk, persoonlijk, en altijd met een glimlach. We helpen je graag de perfecte look samenstellen, of je nu binnenloopt in de winkel of online shopt.</p>
-    <span class="signature">Sandra &amp; Chantal</span>
+  <div class="visit-info">
+    <span class="pre">Kom ons bezoeken</span>
+    <h2>Breng een <span class="script">bezoekje</span></h2>
+    <p>Je bent van harte welkom in onze winkel in de Tilburgse binnenstad. Neem je tijd, pas op je gemak, en geniet van de persoonlijke aandacht.</p>
+
+    <div class="info-block">
+      <div class="icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 1118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      </div>
+      <div>
+        <h4>Adres</h4>
+        <p><strong>Juliana van Stolbergstraat</strong><br>Tilburg, Nederland</p>
+      </div>
+    </div>
+
+    <div class="info-block">
+      <div class="icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+      </div>
+      <div>
+        <h4>Openingstijden</h4>
+        <p>
+          <strong>Dinsdag t/m vrijdag:</strong> 10.00 - 17.30<br>
+          <strong>Zaterdag:</strong> 10.00 - 17.00<br>
+          <strong>Zondag &amp; maandag:</strong> gesloten
+        </p>
+      </div>
+    </div>
+
+    <div class="info-block">
+      <div class="icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>Vragen? Stuur ons gerust een bericht via het <a href="contact.html" style="color:var(--clay);text-decoration:underline;text-underline-offset:3px;">contactformulier</a>.</p>
+      </div>
+    </div>
+
+    <div class="visit-cta">
+      <a href="contact.html" class="btn btn-dark">Neem contact op</a>
+    </div>
   </div>
 </section>
 
-<!-- NEWSLETTER -->
-<section class="newsletter">
-  <div class="newsletter-left">
-    <h3>Meld je aan voor <span class="script">updates</span></h3>
-    <p>*We beloven: geen spam, alleen de leukste aanbiedingen.</p>
+<!-- SISTERS / OVER ONS -->
+<section class="sisters" id="over">
+  <div class="sisters-inner">
+    <div class="sisters-img">
+      <div class="tape">sinds 2016</div>
+      <div class="frame">
+        <svg viewBox="0 0 400 540" preserveAspectRatio="xMidYMid slice">
+          <rect width="400" height="540" fill="#c9a88a"/>
+          <circle cx="140" cy="190" r="48" fill="#e8cda8"/>
+          <circle cx="260" cy="210" r="48" fill="#e8cda8"/>
+          <path d="M98 240 Q140 256 182 240 L198 380 Q198 410 178 420 L148 430 Q132 480 132 540 L106 540 Q106 480 96 430 L70 420 Q54 410 54 380 Z" fill="#a8b19a"/>
+          <path d="M218 260 Q260 276 302 260 L318 400 Q318 430 298 440 L268 450 Q252 500 252 540 L226 540 Q226 500 216 450 L196 440 Q180 430 180 400 Z" fill="#c08870"/>
+          <ellipse cx="140" cy="168" rx="52" ry="36" fill="#8b6a4e"/>
+          <ellipse cx="260" cy="188" rx="52" ry="36" fill="#a8855f"/>
+        </svg>
+      </div>
+    </div>
+    <div class="sisters-text">
+      <span class="pre">Over de zussen</span>
+      <h2>Sandra &amp; Chantal<br><span class="script">achter Sancha</span></h2>
+      <p>Sancha is ontstaan uit de passie van twee zussen: Sandra en Chantal. Allebei werken we in de zorg, maar onze liefde voor damesmode was zo groot dat we er een eigen winkel van wilden maken.</p>
+      <p>Wat begon op beurzen en evenementen, groeide uit tot een vaste plek in de Tilburgse binnenstad. Een winkeltje waar je welkom bent, waar iedereen gezien wordt, en waar we graag een praatje maken onder het passen.</p>
+      <p>We zijn trots op wat we samen hebben opgebouwd, en nog trotser op de fijne klanten die telkens weer langskomen. Tot snel!</p>
+      <span class="signature">Sandra &amp; Chantal</span>
+    </div>
   </div>
-  <form class="newsletter-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Bedankt!';">
-    <input type="text" placeholder="Naam" required>
-    <input type="email" placeholder="E-mail" required>
-    <button type="submit">Inschrijven</button>
-  </form>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery">
+  <div class="section-title">
+    <span class="pre">Een kijkje in de winkel</span>
+    <h2>Sfeer &amp; <span class="script">stijl</span></h2>
+  </div>
+  <div class="gallery-grid">
+    <div class="gallery-item">
+      <svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid slice">
+        <rect width="300" height="300" fill="#e8dcc8"/>
+        <rect x="30" y="60" width="40" height="180" fill="#c08870"/>
+        <rect x="90" y="60" width="40" height="180" fill="#a8b19a"/>
+        <rect x="150" y="60" width="40" height="180" fill="#8a7558"/>
+        <rect x="210" y="60" width="40" height="180" fill="#e6c9b8"/>
+        <line x1="20" y1="50" x2="280" y2="50" stroke="#2a2520" stroke-width="3"/>
+      </svg>
+      <div class="gallery-overlay"></div>
+    </div>
+    <div class="gallery-item">
+      <svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid slice">
+        <rect width="300" height="300" fill="#c9a88a"/>
+        <circle cx="150" cy="120" r="50" fill="#d9b899"/>
+        <path d="M95 170 Q150 190 205 170 L220 280 L80 280 Z" fill="#a8b19a"/>
+      </svg>
+      <div class="gallery-overlay"></div>
+    </div>
+    <div class="gallery-item">
+      <svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid slice">
+        <rect width="300" height="300" fill="#b8a48a"/>
+        <circle cx="100" cy="140" r="30" fill="none" stroke="#fefcf8" stroke-width="3"/>
+        <circle cx="200" cy="140" r="30" fill="none" stroke="#fefcf8" stroke-width="3"/>
+        <line x1="130" y1="140" x2="170" y2="140" stroke="#fefcf8" stroke-width="3"/>
+      </svg>
+      <div class="gallery-overlay"></div>
+    </div>
+    <div class="gallery-item">
+      <svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid slice">
+        <rect width="300" height="300" fill="#a8b19a"/>
+        <rect x="80" y="80" width="140" height="180" fill="#fefcf8" rx="4"/>
+        <circle cx="150" cy="140" r="30" fill="#c08870"/>
+        <rect x="110" y="190" width="80" height="6" fill="#8a7558"/>
+        <rect x="110" y="210" width="60" height="6" fill="#8a7558"/>
+      </svg>
+      <div class="gallery-overlay"></div>
+    </div>
+    <div class="gallery-item">
+      <svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid slice">
+        <rect width="300" height="300" fill="#e6c9b8"/>
+        <path d="M60 120 Q150 80 240 120 L230 220 Q150 200 70 220 Z" fill="#8a7558"/>
+        <circle cx="150" cy="170" r="8" fill="#fefcf8"/>
+      </svg>
+      <div class="gallery-overlay"></div>
+    </div>
+    <div class="gallery-item">
+      <svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid slice">
+        <rect width="300" height="300" fill="#8a7558"/>
+        <rect x="60" y="100" width="60" height="140" fill="#c08870"/>
+        <rect x="140" y="100" width="60" height="140" fill="#a8b19a"/>
+        <rect x="220" y="100" width="60" height="140" fill="#e6c9b8"/>
+      </svg>
+      <div class="gallery-overlay"></div>
+    </div>
+    <div class="gallery-item">
+      <svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid slice">
+        <rect width="300" height="300" fill="#d4c4a8"/>
+        <circle cx="150" cy="150" r="80" fill="none" stroke="#8a7558" stroke-width="2"/>
+        <circle cx="150" cy="150" r="50" fill="#c08870"/>
+        <circle cx="150" cy="150" r="20" fill="#fefcf8"/>
+      </svg>
+      <div class="gallery-overlay"></div>
+    </div>
+    <div class="gallery-item">
+      <svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid slice">
+        <rect width="300" height="300" fill="#c08870"/>
+        <path d="M100 80 L200 80 L210 240 L90 240 Z" fill="#fefcf8"/>
+        <circle cx="150" cy="120" r="8" fill="#c08870"/>
+        <circle cx="150" cy="150" r="8" fill="#c08870"/>
+        <circle cx="150" cy="180" r="8" fill="#c08870"/>
+      </svg>
+      <div class="gallery-overlay"></div>
+    </div>
+  </div>
+  <p class="gallery-cta">Volg ons op <a href="#">Instagram</a> voor meer sfeerimpressies &amp; nieuwe items</p>
+</section>
+
+<!-- CTA STRIP -->
+<section class="cta-strip">
+  <h2>Tot snel in de <span class="script">winkel</span></h2>
+  <p>We staan voor je klaar met een kopje koffie en een eerlijk advies. Loop gerust binnen tijdens onze openingstijden, we maken graag tijd voor je.</p>
+  <div class="btn-group" style="justify-content:center;">
+    <a href="contact.html" class="btn btn-dark">Contact &amp; route</a>
+  </div>
 </section>
 
 <!-- FOOTER -->
-<footer id="contact">
+<footer>
   <div class="footer-logo">
     <div class="logo-stamp">
       <div class="stamp-text">
@@ -1250,62 +1147,39 @@
       </div>
     </div>
     <div class="socials">
+      <a href="https://www.facebook.com/info.sancha/" aria-label="Facebook">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3V2z"/></svg>
+      </a>
       <a href="#" aria-label="Instagram">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
-      </a>
-      <a href="#" aria-label="Facebook">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3V2z"/></svg>
-      </a>
-      <a href="#" aria-label="TikTok">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 8a6 6 0 01-4-1.5V16a6 6 0 11-6-6v3a3 3 0 103 3V2h3a4 4 0 004 4v2z"/></svg>
-      </a>
-      <a href="#" aria-label="Pinterest">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M8 22l4-10M12 8a2 2 0 104 0 2 2 0 00-4 0z"/></svg>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
       </a>
     </div>
   </div>
 
   <div class="footer-col">
-    <h4>Shop</h4>
+    <h4>Bezoek ons</h4>
     <ul>
-      <li><a href="#">Dameskleding</a></li>
-      <li><a href="#">Sieraden</a></li>
-      <li><a href="#">Tassen</a></li>
-      <li><a href="#">Accessoires</a></li>
-      <li><a href="#">Sale</a></li>
+      <li><strong>Adres:</strong> Juliana van Stolbergstraat, Tilburg</li>
+      <li><strong>Di - vr:</strong> 10.00 - 17.30</li>
+      <li><strong>Zaterdag:</strong> 10.00 - 17.00</li>
+      <li><strong>Zo &amp; ma:</strong> gesloten</li>
     </ul>
   </div>
 
   <div class="footer-col">
-    <h4>Info</h4>
+    <h4>Menu</h4>
     <ul>
-      <li><a href="#">Over ons</a></li>
-      <li><a href="#">Contact</a></li>
-      <li><a href="#">Openingstijden</a></li>
-      <li><a href="#">Verzending</a></li>
-      <li><a href="#">Retourneren</a></li>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#assortiment">Assortiment</a></li>
+      <li><a href="#winkel">De winkel</a></li>
+      <li><a href="#over">Over ons</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
-  </div>
-
-  <div class="footer-about">
-    <div class="about-frame">
-      <span class="about-label">kom langs</span>
-      <svg viewBox="0 0 400 240" preserveAspectRatio="xMidYMid slice">
-        <rect width="400" height="240" fill="#c9a88a"/>
-        <rect x="60" y="60" width="280" height="140" fill="#e8cda8"/>
-        <rect x="120" y="100" width="60" height="100" fill="#8a7558"/>
-        <rect x="220" y="100" width="60" height="100" fill="#8a7558"/>
-        <rect x="140" y="120" width="20" height="30" fill="#c8d0bb"/>
-        <rect x="240" y="120" width="20" height="30" fill="#c8d0bb"/>
-        <polygon points="60,60 200,20 340,60" fill="#8a7558"/>
-      </svg>
-    </div>
-    <a href="#" class="learn-more">Bezoek de winkel</a>
   </div>
 
   <div class="footer-bottom">
     <div>© 2026 Sancha · Tilburg · Alle rechten voorbehouden</div>
-    <div>Juliana van Stolbergstraat · info@sancha.nl</div>
+    <div>Twee zussen, één droom</div>
   </div>
 </footer>
 
